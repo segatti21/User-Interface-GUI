@@ -1,0 +1,13 @@
+from PyQt5.QtWidgets import QApplication, QMainWindow
+from output_file import Ui_MainWindow  # Import the UI class from the converted .py file
+
+class MyWindow(QMainWindow, Ui_MainWindow):
+    def __init__(self):
+        super().__init__()
+        self.setupUi(self)  # Initialize the UI
+
+if __name__ == "__main__":
+    app = QApplication([])
+    window = MyWindow()
+    window.show()  # Show the window
+    app.exec_()  # Enter the main loop to run the application
